@@ -1,7 +1,7 @@
 import json
 
 from fastapi import FastAPI, status, HTTPException
-from starlette.responses import JSONResponse
+from fastapi.responses import JSONResponse
 
 from models import phoneDetails
 from helper import api_requests
