@@ -659,7 +659,7 @@ class api_requests:
             lis += await self.five.getServiceDetails(serviceinfo)
         offering = []
         for i in lis:
-            if tools.isError(i):
+            if tools.isError(i) or not isinstance(i, serviceDetails):
                 continue
             data = {
                 "server": i.server,
